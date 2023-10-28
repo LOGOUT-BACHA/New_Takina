@@ -24,7 +24,7 @@ DURATION_LIMIT_MIN = int(
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "10000")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "-1001959856415")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
