@@ -1,5 +1,5 @@
 {
-    "name": "🌹⃝𖣔𝐌𝐔𝐒𝐈𝐂 𝟐.𝐎🥀⛦⃕‌🇮🇳",
+    "name": "🌹⃝⃝⃝⃝𖣔𝐌𝐔𝐒𝐈𝐂 𝟐.𝐎🥀⛦⃕‌🇮🇳",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://te.legra.ph/file/c70cb679b44c808cde50a.jpg",
     "keywords": [
@@ -20,6 +20,11 @@
       "API_HASH": {
         "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐇𝐀𝐒𝐇 𝐅𝐑𝐎𝐌 https://my.telegram.org",
         "value": "42a60d9c657b106370c79bb0a8ac560c",
+        "required": true
+      },
+      "PING_IMG_URL": {
+        "description": "𝐄𝐍𝐓𝐄𝐑 𝐘𝐎𝐔𝐑 𝐏𝐈𝐍𝐆 𝐔𝐑𝐋", 
+        "value": "",
         "required": true
       },
       "BOT_TOKEN": {
