@@ -51,7 +51,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝐕𝐈𝐏 𝐁𝐎𝐘 🌹", url=f"https://t.me/THE_VIP_BOY")
+                        "🌹 𝐓𝐎𝐗𝐈𝐂 𝐁𝐎𝐘 🌹", url=f"https://t.me/ToXiC_BoY_OFFICIAL")
                 ]
             ]
         ),
@@ -105,7 +105,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌹 𝐕𝐈𝐏 𝐁𝐎𝐘 🌹", url=f"https://t.me/THE_VIP_BOY")
+                        "🌹 𝐓𝐎𝐗𝐈𝐂 𝐁𝐎𝐘 🌹", url=f"https://t.me/ToXiC_BoY_OFFICIAL")
                 ]
             ]
         ),
