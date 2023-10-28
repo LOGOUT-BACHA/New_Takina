@@ -181,7 +181,7 @@ async def start_comm(client, message: Message, _):
                             text="🥀𝐘𝐎𝐔𝐓𝐔𝐁𝐄🥀", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🏓𝐒𝐔𝐏𝐏𝐎𝐑𝐓🏓", url="https://t.me/TG_FRIENDSS"
+                            text="🏓𝐒𝐔𝐏𝐏𝐎𝐑𝐓🏓", url="https://t.me/indian_chatting_club_offical"
                         ),
                     ],
                 ]
@@ -232,7 +232,7 @@ async def start_comm(client, message: Message, _):
             sender_name = message.from_user.first_name
             return await app.send_message(
                 config.LOG_GROUP_ID,
-                f"{message.from_user.mention} 𝐉𝐮𝐬𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐕𝐢𝐩 𝐁𝐨𝐭😍.\n\n**𝐔𝐬𝐞𝐫 𝐈𝐝:-** {sender_id}\n**𝐍𝐚𝐦𝐞:-** {sender_name}",
+                f"{message.from_user.mention} 𝐉𝐮𝐬𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐓𝐨𝐱𝐢𝐜 𝐁𝐨𝐭😍.\n\n**𝐔𝐬𝐞𝐫 𝐈𝐝:-** {sender_id}\n**𝐍𝐚𝐦𝐞:-** {sender_name}",
             )
 
 
