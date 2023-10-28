@@ -8,14 +8,14 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH", "")
+API_ID = int(getenv("API_ID", "26238837"))
+API_HASH = getenv("API_HASH", "8f77e95abef9292bb0452fc50ff79c60")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "6664881461:AAEl0rxk0OIEr64ULENRHaHkQginkcqh2-I")
 
 # Database to save your chats and stats... Get MongoDB:-  
-MONGO_DB_URI = getenv("MONGO_DB_URI", "")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://toxic:skcc112566@cluster0.fcegaf8.mongodb.net/?retryWrites=true&w=majority")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
@@ -28,18 +28,18 @@ SONG_DOWNLOAD_DURATION = int(
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001892007985"))
 
 # A name for your Music bot,𝐀𝐥𝐥 𝐃𝐞𝐬𝐢𝐠𝐧 𝐍𝐚𝐦𝐞 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝.
-MUSIC_BOT_NAME = "𝄟ॐ❥𝗩𝗜𝗣🍷𝗠𝗨𝗦𝗜𝗖⏤͟͟͞❥͜͡𝄟⃟"
+MUSIC_BOT_NAME = "𝐓𝐎𝐗𝐈𝐂 𝐌𝐔𝐒𝐈𝐂 🎵"
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "").split())
+    map(int, getenv("OWNER_ID", "6482810913").split())
 )  # Input type must be interger
 
-GROUP_USERNAME = getenv("GROUP_USERNAME")
-CHANNEL_USERNAME = getenv("CHANNEL_USERNAME")
+GROUP_USERNAME = getenv("GROUP_USERNAME", "https://t.me/indian_chatting_club_offical")
+CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/indian_chatting_club_offical")
 # Fill your group and channel username (without @)
 # If your group and channel is private then fill like this:-  +GepTJkDUaiA5NmRl  , except (https://t.me/)
 
@@ -48,15 +48,15 @@ CHANNEL_USERNAME = getenv("CHANNEL_USERNAME")
 
 
 # Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "0cb4f102-2d8b-4062-aa9f-5af7a6f90f6d")
 
 # You have to Enter the app name which you gave to identify your  Music Bot in Heroku.
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "toxicgang")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/THE-VIP-BOY-OP/VIP-MUSIC",
+    "https://github.com/skofficial001/TOXIC-MUSIC/",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -64,8 +64,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL","https://t.me/vip_creators")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/tg_friendss")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL","http://t.me/ToXiC_MuSiC_OFFICIAL_bot")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "http://t.me/ToXiC_MuSiC_OFFICIAL_bot")
 SUPPORT_HEHE = SUPPORT_GROUP
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
@@ -96,7 +96,7 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/THE-VIP-BOY-OP/VIP-MUSIC")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/skofficial001/TOXIC-MUSIC/")
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
 SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "19609edb1b9f4ed7be0c8c1342039362")
@@ -134,7 +134,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 SET_CMDS = getenv("SET_CMDS", True)
 
 # You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "")
+STRING1 = getenv("STRING_SESSION", "BQAxkLImu0T7DILCwk9HWQw9vDWsW57LJRewYS-nlOA0bz-ZpI_tkmzWQ833yIqE8CSigw7Xg2eQpdqoVva__tyKImVhTKtuxQ9ZHdohxZXobj_2jMVkONcPEokZyOF34fn6Q8Ibscnk3fMkSpaZIrnkS6V4__f6lwjoyuJJXT8F_LLQssit76hj_isIpkW4yaBh2R113WbmmN78DzNr1wXY9tC5d-z6hwFDE69_NSYgN8JNhY22HGyKuPOci4k9L9Zvd_LvF08hxTf38upZ6_scuC3HnmeZB3uLbzWUTPn_JckwsMW9oXP57W0dJ2FEOfRM_WuWWIyji2zknHsxjg90AAAAAZbsk8EA")
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
