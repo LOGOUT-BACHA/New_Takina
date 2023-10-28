@@ -18,7 +18,7 @@ BOT_TOKEN = getenv("BOT_TOKEN", "6664881461:AAEl0rxk0OIEr64ULENRHaHkQginkcqh2-I"
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Krishna:pss968048@cluster0.4rfuzro.mongodb.net/?retryWrites=true&w=majority")
 
 #Fill Your Ping Image URL If Any bot not working use this @Tele_GraphUploaderBot
-PING_IMG_URL = getenv("https://te.legra.ph/file/c70cb679b44c808cde50a.jpg") 
+PING_IMG_URL = getenv("PING_IMG_URL", "https://te.legra.ph/file/c70cb679b44c808cde50a.jpg") 
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
