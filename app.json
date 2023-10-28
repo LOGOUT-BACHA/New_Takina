@@ -1,7 +1,7 @@
 {
-    "name": "🌹⃝𖣔𝐕𝐈𝐏 𝐌𝐔𝐒𝐈𝐂🥀⛦⃕‌🇮🇳",
+    "name": "🌹⃝𖣔𝐌𝐔𝐒𝐈𝐂 𝟐.𝐎🥀⛦⃕‌🇮🇳",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/3a131483d8a27dbf41b3a.jpg",
+    "logo": "https://te.legra.ph/file/c70cb679b44c808cde50a.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -16,7 +16,7 @@
         "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐈𝐃 𝐅𝐑𝐎𝐌 https://my.telegram.org",
         "value": "14050586",
         "required": true
-      },
+      }, 
       "API_HASH": {
         "description": "𝐆𝐄𝐓 𝐀𝐏𝐈 𝐇𝐀𝐒𝐇 𝐅𝐑𝐎𝐌 https://my.telegram.org",
         "value": "42a60d9c657b106370c79bb0a8ac560c",
