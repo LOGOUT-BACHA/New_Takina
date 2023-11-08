@@ -51,10 +51,10 @@ CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/indian_chatting_club
 
 
 # Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY", "0cb4f102-2d8b-4062-aa9f-5af7a6f90f6d")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "80332b18-4170-4af6-8880-37cf8b49ec39")
 
 # You have to Enter the app name which you gave to identify your  Music Bot in Heroku.
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "toxicgang")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music2")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
