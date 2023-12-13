@@ -51,10 +51,10 @@ CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/MO_sk_official")
 
 
 # Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY", "80332b18-4170-4af6-8880-37cf8b49ec39")
+HEROKU_API_KEY = getenv("HEROKU_API_KEY", "f2fe45bb-3533-4673-bd8e-9b8cb36befe4")
 
 # You have to Enter the app name which you gave to identify your  Music Bot in Heroku.
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music2")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music-office")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
