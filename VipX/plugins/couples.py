@@ -5,7 +5,7 @@ from telegraph import upload_file
 from PIL import Image , ImageDraw
 from pyrogram import *
 from pyrogram.types import *
-from pyrogram.enums import *
+from pyrogram.idle import *
 
 #BOT FILE NAME
 from VipX import VipX as VipX
