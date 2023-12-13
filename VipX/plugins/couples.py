@@ -8,8 +8,8 @@ from pyrogram.types import *
 from pyrogram.enums import *
 
 #BOT FILE NAME
-from Michiko import Michiko as Michiko
-from Michiko.mongo.couples_db import _get_image, get_couple, save_couple
+from VipX import VipX as VipX
+from VipX.mongo.couples_db import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()
@@ -31,7 +31,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@Michiko.on_message(filters.command("couples"))
+@app.on_message(filters.command("couples"))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -43,7 +43,7 @@ async def ctest(_, message):
          #GET LIST OF USERS
          list_of_users = []
 
-         async for i in Michiko.get_chat_members(message.chat.id, limit=50):
+         async for i in VipX.get_chat_members(message.chat.id, limit=50):
              if not i.user.is_bot:
                list_of_users.Michikoend(i.user.id)
 
@@ -53,25 +53,25 @@ async def ctest(_, message):
               c1_id = random.choice(list_of_users)
 
 
-         photo1 = (await Michiko.get_chat(c1_id)).photo
-         photo2 = (await Michiko.get_chat(c2_id)).photo
+         photo1 = (await VipX.get_chat(c1_id)).photo
+         photo2 = (await VipX.get_chat(c2_id)).photo
  
-         N1 = (await Michiko.get_users(c1_id)).mention 
-         N2 = (await Michiko.get_users(c2_id)).mention
+         N1 = (await VipX.get_users(c1_id)).mention 
+         N2 = (await VipX.get_users(c2_id)).mention
          
          try:
-            p1 = await Michiko.download_media(photo1.big_file_id, file_name="pfp.png")
+            p1 = await VipX.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "Michiko/assets/upic.png"
+            p1 = "VipX/assets/upic.png"
          try:
-            p2 = await Michiko.download_media(photo2.big_file_id, file_name="pfp1.png")
+            p2 = await VipX.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "Michiko/assets/upic.png"
+            p2 = "VipX/assets/upic.png"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("Michiko/assets/cppic.png")
+         img = Image.open("VipX/assets/cppic.png")
 
          img1 = img1.resize((740,740))
          img2 = img2.resize((740,740))
