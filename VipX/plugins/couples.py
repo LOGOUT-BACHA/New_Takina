@@ -9,7 +9,7 @@ from pyrogram.idle import *
 
 #BOT FILE NAME
 from VipX import VipX as VipX
-from VipX.mongo.couples_db import _get_image, get_couple, save_couple
+from VipX.utils.database import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()
