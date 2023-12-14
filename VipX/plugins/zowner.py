@@ -128,7 +128,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/skofficial001/TOXIC-MUSIC/")
                 ]
             ]
         ),
@@ -146,7 +146,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/skofficial001/TOXIC-MUSIC/")
                 ]
             ]
         ),
@@ -164,7 +164,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://github.com/skofficial001/TOXIC-MUSIC/")
                 ]
             ]
         ),
