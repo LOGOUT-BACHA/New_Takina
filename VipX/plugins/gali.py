@@ -144,4 +144,9 @@ async def help(client: Client, message: Message):
     )
 
 
-
+@app.on_message(
+    filters.command("gali")
+    & filters.group
+    & ~filters.edited & filters.group & ~filters.edited)
+async def help(client: Client, message: Message):
+    await message.reply_text("**ɢᴀʟɪ ɪs sᴛᴀʀᴛᴇᴅ/gali 𝐂𝐨𝐦𝐦𝐚𝐧𝐝.**")
