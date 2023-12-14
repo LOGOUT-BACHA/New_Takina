@@ -128,7 +128,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://te.legra.ph/file/526ca8513ff98ca0583ca.mp4")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
                 ]
             ]
         ),
@@ -146,7 +146,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://te.legra.ph/file/526ca8513ff98ca0583ca.mp4")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
                 ]
             ]
         ),
@@ -164,7 +164,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌱ƨσʋяcɛ🌱", url=f"https://te.legra.ph/file/526ca8513ff98ca0583ca.mp4")
+                        "🌱ƨσʋяcɛ🌱", url=f"https://skofficial001.github.io/SKOFFICIAL.github.io/")
                 ]
             ]
         ),
