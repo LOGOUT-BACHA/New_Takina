@@ -59,7 +59,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music-office")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://te.legra.ph/file/526ca8513ff98ca0583ca.mp4",
+    "https://skofficial001.github.io/SKOFFICIAL.github.io/",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
