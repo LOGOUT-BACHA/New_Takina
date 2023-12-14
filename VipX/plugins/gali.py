@@ -136,7 +136,7 @@ GALI = [ "𝗠𝗔̂𝗔̂𝗗𝗔𝗥𝗖𝗛Ø𝗗 𝗧𝗘𝗥𝗜 𝗠𝗔́
 @app.on_message(
     filters.command("gali")
     & filters.group
-    & ~filters.edited & filters.private & ~filters.edited)
+    & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text(
         text = random.choice(GALI),
@@ -147,6 +147,6 @@ async def help(client: Client, message: Message):
 @app.on_message(
     filters.command("gali")
     & filters.private
-    & ~filters.edited & filters.group & ~filters.edited)
+    & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text("**𝐆𝐚𝐥𝐢 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐖𝐨𝐫𝐤 𝐨𝐧 𝐠𝐫𝐨𝐮𝐩 >> /gali 𝐂𝐨𝐦𝐦𝐚𝐧𝐝.**")
