@@ -54,12 +54,12 @@ CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/MO_sk_official")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", "f2fe45bb-3533-4673-bd8e-9b8cb36befe4")
 
 # You have to Enter the app name which you gave to identify your  Music Bot in Heroku.
-HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music-office")
+HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", "music-mem")
 
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://skofficial001.github.io/SKOFFICIAL.github.io/",
+    "https://github.com/skofficial001/TOXIC-MUSIC/",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
