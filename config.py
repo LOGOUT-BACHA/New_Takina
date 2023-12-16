@@ -41,8 +41,8 @@ OWNER_ID = list(
     map(int, getenv("OWNER_ID", "6482810913").split())
 )  # Input type must be interger
 
-GROUP_USERNAME = getenv("GROUP_USERNAME", "https://t.me/MO_sk_official")
-CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/MO_sk_official")
+GROUP_USERNAME = getenv("GROUP_USERNAME", "https://t.me/Late_Night_Chatters")
+CHANNEL_USERNAME = getenv("CHANNEL_USERNAME", "https://t.me/Late_Night_Chatters")
 # Fill your group and channel username (without @)
 # If your group and channel is private then fill like this:-  +GepTJkDUaiA5NmRl  , except (https://t.me/)
 
@@ -67,8 +67,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL","https://t.me/MO_sk_official")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/MO_sk_official")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL","https://t.me/Late_Night_Chatters")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/Late_Night_Chatters")
 SUPPORT_HEHE = SUPPORT_GROUP
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", None)
