@@ -1,18 +1,21 @@
 import html
 import random
 
-from telegram import Update, MessageEntity
-from telegram.ext import Filters, CallbackContext
-from telegram.error import BadRequest
-from Telegram.modules.sql import afk_sql as sql
-from Telegram.modules.users import get_user_id
-from Telegram.modules.helper_funcs.decorators import zaid, zaidmsg
+from VipX import Update, MessageEntity
+from VipX.ext import Filters, CallbackContext
+from VipX.error import BadRequest
+from VipX.modules.sql import afk_sql as sql
+from VipX.modules.users import get_user_id
+from VipX.modules.helper_funcs.decorators import zaid, zaidmsg
 
 @zaidmsg(Filters.regex("(?i)^brb"), friendly="afk", group=3)
 @zaid(command="afk", group=3)
 def afk(update: Update, context: CallbackContext):
     args = update.effective_message.text.split(None, 1)
     user = update.effective_user
+
+    # Command
+AFK_COMMAND = get_command("AFK_COMMAND")
 
     if not user:  # ignore channels
         return
