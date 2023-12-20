@@ -81,7 +81,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/c70cb679b44c808cde50a.jpg",
+        photo=f"https://te.legra.ph/file/341467f69dcd5774d8269.jpg",
         caption=f"""**◈ 𝐓𝙷𝙸𝚂 𝐂𝙾𝙼𝙼𝙰𝙽𝙳 𝐈𝚂 𝐎𝙽𝙻𝚈 𝐅𝙾𝚁 𝐒𝚄𝙳𝙾 𝐔𝚂𝙴𝚁𝚂 𝐁𝙰𝙱𝚈..**""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -99,7 +99,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/c70cb679b44c808cde50a.jpg",
+        photo=f"https://te.legra.ph/file/341467f69dcd5774d8269.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐃𝐌❤️𝐎𝐖𝐍𝐄𝐑🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -122,7 +122,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://te.legra.ph/file/7285a94cb1026fc2d2dc0.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -140,7 +140,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://te.legra.ph/file/7285a94cb1026fc2d2dc0.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -158,7 +158,7 @@ async def help(client: Client, message: Message):
     & ~filters.edited & filters.private & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/4b52da6d880cbb199298a.jpg",
+        photo=f"https://te.legra.ph/file/7285a94cb1026fc2d2dc0.jpg",
         caption=f"""🍁𝐂𝐋𝐈𝐂𝐊🥰𝐁𝐄𝐋𝐎𝐖💝𝐁𝐔𝐓𝐓𝐎𝐍✨𝐓𝐎🙊𝐆𝐄𝐓🌱𝐑𝐄𝐏𝐎🍁""",
         reply_markup=InlineKeyboardMarkup(
             [
