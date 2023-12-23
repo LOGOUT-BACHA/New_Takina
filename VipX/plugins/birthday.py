@@ -1,4 +1,4 @@
-import Vipx
+import random
 from Vipx.modules.utils
 
 # Initialize your bot with the Telegram Bot Token
