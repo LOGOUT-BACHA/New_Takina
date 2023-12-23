@@ -2,7 +2,7 @@ from VipX
 import random
 
 # Initialize your bot with the Telegram Bot Token
-bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
+bot = VipX.VipX('YOUR_TELEGRAM_BOT_TOKEN')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
