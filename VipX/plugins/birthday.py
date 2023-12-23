@@ -1,17 +1,7 @@
-import requests
-import random
-import os
-import re
-import asyncio
-import time
-from VipX import app
-import string
-from strings import get_command
-from VipX.misc import SUDOERS
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import telebot
 
 # Initialize your bot with the Telegram Bot Token
-bot = VipX.VipX('YOUR_TELEGRAM_BOT_TOKEN')
+bot = telebot.TeleBot('YOUR_TELEGRAM_BOT_TOKEN')
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
