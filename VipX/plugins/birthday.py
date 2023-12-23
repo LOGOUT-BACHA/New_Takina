@@ -1,4 +1,4 @@
-from Vipx.modules.utils
+from VipX
 import random
 
 # Initialize your bot with the Telegram Bot Token
