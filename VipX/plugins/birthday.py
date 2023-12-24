@@ -11,7 +11,14 @@ from strings import get_command
 from VipX.misc import SUDOERS
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-WISH = [ "✧═══════•❁❀❁•═══════✧/n🎂ʜᴀᴘᴘʏ ʙɪʀᴛʜᴅᴀʏ ɢᴏᴠɪɴᴅ ʙᴀʜɪ ɢᴏᴅ ʙʟᴇss ʏᴏᴜ✨/nsᴛᴀʏ ᴀʟᴡᴀʏs ʜᴀᴘᴘʏ✨/n🥳ᴇɴᴊᴏʏ ʏᴏᴜʀ ʙᴇᴀᴜᴛɪғᴜʟ ᴅᴀʏ🥳/n╭─────── • ◆ • ───────╮/n      🎂𝐇𝐀𝐏𝐏𝐘 𝐁𝐈𝐑𝐓𝐇𝐃𝐀𝐘🎂/n╰─────── • ◆ • ───────╯/n🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂🎂/n✧═══════•❁❀❁•═══════✧",
+WISH = [ '''
+✧✧🔥🔥🔥🔥🔥✧✧
+✧╭┻┻┻┻┻┻┻┻┻┻╮✧
+✧┃╱╲ 🍓╱╲🍒 ╱╲┃✧
+╭┻━🍒━━━🍍━━━┻╮
+┃╱╲╱╲ 🍈╱╲🍇 ╱╲ ┃
+🎁━━━━━━━━━━━━🎁
+✨💕Happy Birthday💕✨''' ,
 
 ]
 
