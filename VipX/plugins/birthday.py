@@ -34,7 +34,7 @@ WISH = [ '''
     & ~filters.edited & filters.group & ~filters.edited)
 async def help(client: Client, message: Message):
     await message.reply_text(
-        text = random.choice(GALI),
+        text = random.choice(WISH),
         
     )
 
