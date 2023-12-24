@@ -1,4 +1,15 @@
-from VipX.ext import Updater,CommandHandler,MessageHandler,Filters
+from pyrogram import Client, filters
+import requests
+import random
+import os
+import re
+import asyncio
+import time
+from VipX import app
+import string
+from strings import get_command
+from VipX.misc import SUDOERS
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 # Function to handle the "/afk" command
 def set_afk(update, context):
