@@ -1,4 +1,3 @@
-
 from VipX.ext import Updater,CommandHandler,MessageHandler,Filters
 
 # Function to handle the "/afk" command
