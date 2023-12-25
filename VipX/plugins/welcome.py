@@ -65,7 +65,7 @@ async def join_watcher(_, message):
 
 
 @VipX.on(fire_on_cmd(pattern="savewelcome")
-async def _(event):
+async def join_watcher(_, message):
     if event.fwd_from:
         return
     msg = await event.get_reply_message()
@@ -92,7 +92,7 @@ async def _(event):
 
 
 @VipX.on(fire_on_cmd(pattern="listwelcome$")  # pylint:disable=E0602
-async def _(event):
+async def join_watcher(_, message):
     if event.fwd_from:
         return
     count = get_current_welcome_settings(event.chat_id)
