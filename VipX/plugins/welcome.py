@@ -1,46 +1,119 @@
-import random
-from pyrogram import Client
-from pyrogram.types import Message
-from pyrogram import filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from VipX import app  
+from telethon import events
+from telethon.utils import pack_bot_file_id
 
-photo = [
-    "https://telegra.ph/file/1b819cfbcb2a2d3c738f6.jpg",
-    "https://telegra.ph/file/3021c823c7f006658682f.jpg",
-    "https://telegra.ph/file/05561f0fbf323e057ab87.jpg",
-    "https://telegra.ph/file/7a6b51ee0077724254ca7.jpg",
-    "https://telegra.ph/file/b3de9e03e5c8737ca897f.jpg",
-    "https://telegra.ph/file/0b6bb91986ef3a143033b.jpg",
-    "https://telegra.ph/file/2b5b66c9a0989afa0779a.jpg",
-    "https://telegra.ph/file/471339bb1901a007c0c2f.jpg",
-    "https://telegra.ph/file/ab7d958d707ef649bc3c3.jpg",
-    "https://telegra.ph/file/4f877f2843f31fcc32242.jpg",
-    "https://telegra.ph/file/ecefaa3e00fb911826673.jpg",
-    "https://telegra.ph/file/2a10683a2166f7cf4940b.jpg",
-    "https://telegra.ph/file/cda35ca740e1229626e48.jpg",
-    "https://telegra.ph/file/9f7186cd3d87199426e03.jpg",
-    "https://telegra.ph/file/7fe39f1baa1a93b9a3f0e.jpg",
-    
-]
+from firebot import CMD_HELP
+from firebot.modules.sql_helper.welcome_sql import (
+    add_welcome_setting,
+    get_current_welcome_settings,
+    rm_welcome_setting,
+    update_previous_welcome,
+)
+from firebot.utils import fire_on_cmd
 
 
-@app.on_message(filters.new_chat_members, group=3)
-async def join_watcher(_, message):    
-    chat = message.chat
-    
-    for members in message.new_chat_members:
-        
-            count = await app.get_chat_members_count(chat.id)
+@bot.on(events.ChatAction())  # pylint:disable=E0602
+async def _(event):
+    cws = get_current_welcome_settings(event.chat_id)
+    if cws:
+        # logger.info(event.stringify())
+        """user_added=False,
+        user_joined=True,
+        user_left=False,
+        user_kicked=False,"""
+        if event.user_joined:
+            if cws.should_clean_welcome:
+                try:
+                    await bot.delete_messages(  # pylint:disable=E0602
+                        event.chat_id, cws.previous_welcome
+                    )
+                except Exception as e:  # pylint:disable=C0103,W0703
+                    logger.warn(str(e))  # pylint:disable=E0602
+            a_user = await event.get_user()
+            chat = await event.get_chat()
+            me = await bot.get_me()
 
-            msg = (
-                f"**🌷𝐇ᴇʏ {message.from_user.mention} 𝐖ᴇʟᴄᴏᴍᴇ 𝐈ɴ 𝐀 𝐍ᴇᴡ 𝐆ʀᴏᴜᴘ🥳**\n\n"
-                f"**📝𝐂ʜᴀᴛ 𝐍ᴀᴍᴇ:** {message.chat.title}\n"
-                f"**🔐𝐂ʜᴀᴛ 𝐔.𝐍:** @{message.chat.username}\n"
-                f"**💖𝐔ʀ 𝐈d:** {message.from_user.id}\n"
-                f"**✍️𝐔ʀ 𝐔.𝐍:** @{message.from_user.username}\n"
-                f"**👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉**"
+            title = chat.title if chat.title else "this chat"
+            participants = await event.client.get_participants(chat)
+            count = len(participants)
+            mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
+            first = a_user.first_name
+            last = a_user.last_name
+            if last:
+                fullname = f"{first} {last}"
+            else:
+                fullname = first
+            username = (
+                f"@{me.username}" if me.username else f"[Me](tg://user?id={me.id})"
             )
-            await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"🥰ᴜᴛʜᴀ ʟᴏ ᴍᴜᴊᴇ🥵", url=f"https://t.me/{app.username}?startgroup=true")]
-         ]))
+            userid = a_user.id
+            current_saved_welcome_message = cws.custom_welcome_message
+            mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
+
+            current_message = await event.reply(
+                current_saved_welcome_message.format(
+                    mention=mention,
+                    title=title,
+                    count=count,
+                    first=first,
+                    last=last,
+                    fullname=fullname,
+                    username=username,
+                    userid=userid,
+                ),
+                file=cws.media_file_id,
+            )
+            update_previous_welcome(event.chat_id, current_message.id)
+
+
+@fire.on(fire_on_cmd(pattern="savewelcome"))
+async def _(event):
+    if event.fwd_from:
+        return
+    msg = await event.get_reply_message()
+    if msg and msg.media:
+        bot_api_file_id = pack_bot_file_id(msg.media)
+        add_welcome_setting(event.chat_id, msg.message, True, 0, bot_api_file_id)
+        await event.edit("Welcome note saved. ")
+    else:
+        input_str = event.text.split(None, 1)
+        add_welcome_setting(event.chat_id, input_str[1], True, 0, None)
+        await event.edit("Welcome note saved. ")
+
+
+@fire.on(fire_on_cmd(pattern="clearwelcome$"))  # pylint:disable=E0602
+async def _(event):
+    if event.fwd_from:
+        return
+    cws = get_current_welcome_settings(event.chat_id)
+    rm_welcome_setting(event.chat_id)
+    await event.edit(
+        "Welcome note cleared. "
+        + "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
+    )
+
+
+@fire.on(fire_on_cmd(pattern="listwelcome$"))  # pylint:disable=E0602
+async def _(event):
+    if event.fwd_from:
+        return
+    cws = get_current_welcome_settings(event.chat_id)
+    if hasattr(cws, "custom_welcome_message"):
+        await event.edit(
+            "Welcome note found. "
+            + "Your welcome message is\n\n`{}`.".format(cws.custom_welcome_message)
+        )
+    else:
+        await event.edit("No Welcome Message found")
+
+
+CMD_HELP.update(
+    {
+        "welcome": "**Welcome**\
+\n\n**Syntax : **`.savewelcome <welcome message to save>`\
+\n**Usage :** Saves welcome message.\
+\n\n**Syntax : **`.clearwelcome`\
+\n**Usage :** Clears welcome message.\
+\n\n**Syntax : **`.listwelcome`\
+\n**Usage :** Lists existing welcome message."
+    }
+)
