@@ -5,7 +5,7 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from VipX import app  
 
-@bot.on(events.ChatAction())  # pylint:disable=E0602
+@bot.on(events.ChatAction()  # pylint:disable=E0602
 async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     if cws:
@@ -59,7 +59,7 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@VipX.on(fire_on_cmd(pattern="savewelcome"))
+@VipX.on(fire_on_cmd(pattern="savewelcome")
 async def _(event):
     if event.fwd_from:
         return
@@ -74,7 +74,7 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
-@VipX.on(fire_on_cmd(pattern="clearwelcome$"))  # pylint:disable=E0602
+@VipX.on(fire_on_cmd(pattern="clearwelcome$")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -86,7 +86,7 @@ async def _(event):
     )
 
 
-@VipX.on(fire_on_cmd(pattern="listwelcome$"))  # pylint:disable=E0602
+@VipX.on(fire_on_cmd(pattern="listwelcome$")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
