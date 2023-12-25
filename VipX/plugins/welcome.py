@@ -2,7 +2,7 @@ from telethon import events
 from telethon.utils import pack_bot_file_id
 
 from firebot import CMD_HELP
-from firebot.modules.sql_helper.welcome_sql import (
+from firebot.plugins.sql_helper.welcome_sql import (
     add_welcome_setting,
     get_current_welcome_settings,
     rm_welcome_setting,
