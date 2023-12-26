@@ -4,6 +4,13 @@ from pyrogram.types import Message
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from VipX import app  
+from VipX.plugins.sql_helper.welcome_sql
+import (add_welcome_setting,
+    get_current_welcome_settings,
+    rm_welcome_setting,
+    update_previous_welcome,
+))
+from VipX.utils import VipX_on_cmd
 
 @app.on_message(filters.new_chat_members, group=3)# pylint:disable=E0602
 async def _(event):
