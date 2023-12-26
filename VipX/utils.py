@@ -4,12 +4,12 @@ import logging
 import re
 from pathlib import Path
 
-from telethon import events
+from pyrogram import events
 
 from var import Var
-from firebot import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot
-from firebot.Configs import Config
-from firebot.wraptools import (
+from VipX import CMD_LIST, LOAD_PLUG, SUDO_LIST, bot
+from VipX.Configs import Config
+from VipX.wraptools import (
     am_i_admin,
     ignore_bot,
     ignore_fwd,
