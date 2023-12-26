@@ -5,22 +5,17 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from VipX import app  
 
-@app.on_message(filters.new_chat_members, group=3)
-async def join_watcher(_, message):    
-    chat = message.chat
-    
-    for members in message.new_chat_members:
-        
-            count = await app.get_chat_members_count(chat.id)
-
-    if count:
+@bot.on(events.ChatAction())  # pylint:disable=E0602
+async def _(event):
+    cws = get_current_welcome_settings(event.chat_id)
+    if cws:
         # logger.info(event.stringify())
         """user_added=False,
         user_joined=True,
         user_left=False,
         user_kicked=False,"""
         if event.user_joined:
-            if count.should_clean_welcome:
+            if cws.should_clean_welcome:
                 try:
                     await bot.delete_messages(  # pylint:disable=E0602
                         event.chat_id, cws.previous_welcome
@@ -33,7 +28,7 @@ async def join_watcher(_, message):
 
             title = chat.title if chat.title else "this chat"
             participants = await event.client.get_participants(chat)
-            count = len(participants)
+            cws = len(participants)
             mention = "[{}](tg://user?id={})".format(a_user.first_name, a_user.id)
             first = a_user.first_name
             last = a_user.last_name
@@ -83,7 +78,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    count = get_current_welcome_settings(event.chat_id)
+    cws = get_current_welcome_settings(event.chat_id)
     rm_welcome_setting(event.chat_id)
     await event.edit(
         "Welcome note cleared. "
@@ -95,8 +90,8 @@ async def _(event):
 async def join_watcher(_, message):
     if event.fwd_from:
         return
-    count = get_current_welcome_settings(event.chat_id)
-    if hasattr(count, "custom_welcome_message"):
+    cws = get_current_welcome_settings(event.chat_id)
+    if hasattr(cws, "custom_welcome_message"):
         await event.edit(
             "Welcome note found. "
             + "Your welcome message is\n\n`{}`.".format(cws.custom_welcome_message)
