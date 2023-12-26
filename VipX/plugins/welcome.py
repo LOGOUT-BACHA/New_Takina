@@ -65,7 +65,7 @@ async def join_watcher(_, message):
 
 
 @VipX.on(fire_on_cmd(pattern="savewelcome")
-async def (event):
+async def _(event):
     if event.fwd_from:
         return
     msg = await event.get_reply_message()
