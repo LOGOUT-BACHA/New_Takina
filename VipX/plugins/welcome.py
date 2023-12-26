@@ -1,4 +1,4 @@
-from Vipx import events
+from Pyrogram import events
 from VipX.utils import pack_bot_file_id
 
 from VipX import CMD_HELP
