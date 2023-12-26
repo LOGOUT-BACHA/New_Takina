@@ -104,16 +104,3 @@ async def join_watcher(_, message):
         )
     else:
         await event.edit("No Welcome Message found")
-
-
-CMD_HELP.update(
-    {
-        "welcome": "**Welcome**\
-\n\n**Syntax : **`.savewelcome <welcome message to save>`\
-\n**Usage :** Saves welcome message.\
-\n\n**Syntax : **`.clearwelcome`\
-\n**Usage :** Clears welcome message.\
-\n\n**Syntax : **`.listwelcome`\
-\n**Usage :** Lists existing welcome message."
-    }
-      )
