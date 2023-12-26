@@ -93,7 +93,7 @@ async def _(event):
 @app.on_message(
     filters.command("listwelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
     & filters.group) # pylint:disable=E0602
-async def join_watcher(_, message):
+async def _(event):
     if event.fwd_from:
         return
     cws = get_current_welcome_settings(event.chat_id)
