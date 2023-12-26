@@ -60,7 +60,7 @@ async def _(event):
 
 
 @app.on_message(
-    filters.command("savewelcome$)
+    filters.command("savewelcome$")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited)
 async def _(event):
@@ -78,7 +78,7 @@ async def _(event):
 
 
 @app.on_message(
-    filters.command(clearwelcome$)
+    filters.command(clearwelcome$")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited) # pylint:disable=E0602
 async def _(event):
@@ -93,7 +93,7 @@ async def _(event):
 
 
 @app.on_message(
-    filters.command(listwelcome$)
+    filters.command(listwelcome$")
     & filters.group
     & ~filters.edited & filters.group & ~filters.edited) # pylint:disable=E0602
 async def _(event):
