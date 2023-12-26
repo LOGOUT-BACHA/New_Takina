@@ -3,7 +3,6 @@ import random
 
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
-from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
 
 from VipX import dispatcher,OWNER_ID
 from VipX.modules.disable import (
