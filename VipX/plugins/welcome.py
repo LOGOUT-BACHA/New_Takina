@@ -59,7 +59,9 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@app.on_message(VipX_on_cmd(pattern="savewelcome"))
+@app.on_message(
+    filters.command("savewelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
+    & filters.group)
 async def _(event):
     if event.fwd_from:
         return
@@ -74,7 +76,9 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
-@app.on_message(VipX_on_cmd(pattern="clearwelcome$")) # pylint:disable=E0602
+@app.on_message(
+    filters.command("clearwelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
+    & filters.group) # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -86,7 +90,9 @@ async def _(event):
     )
 
 
-@app.on_message(VipX_on_cmd(pattern="listwelcome$")) # pylint:disable=E0602
+@app.on_message(
+    filters.command("listwelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
+    & filters.group) # pylint:disable=E0602
 async def join_watcher(_, message):
     if event.fwd_from:
         return
