@@ -59,9 +59,12 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
+SAVEWELCOME_COMMAND = get_command("SAVEWELCOME_COMMAND")
+
 @app.on_message(
-    filters.command("savewelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
-    & filters.group)
+    filters.command(SAVEWELCOME_COMMAND)
+    & filters.group
+    & ~filters.edited & filters.group & ~filters.edited)
 async def _(event):
     if event.fwd_from:
         return
@@ -76,9 +79,12 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
+CLEARWELCOME_COMMAND = get_command("CLEARWELCOME_COMMAND")
+
 @app.on_message(
-    filters.command("clearwelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
-    & filters.group) # pylint:disable=E0602
+    filters.command(CLEARWELCOME_COMMAND)
+    & filters.group
+    & ~filters.edited & filters.group & ~filters.edited) # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -90,9 +96,12 @@ async def _(event):
     )
 
 
+LISTWELCOME_COMMAND = get_command("LISTWELCOME_COMMAND")
+
 @app.on_message(
-    filters.command("listwelcome", prefixes=["/", "!", "%", ",", "", ".", "@", "#"])
-    & filters.group) # pylint:disable=E0602
+    filters.command(LISTWELCOME_COMMAND)
+    & filters.group
+    & ~filters.edited & filters.group & ~filters.edited) # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
