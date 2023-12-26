@@ -59,7 +59,7 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-SAVEWELCOME_COMMAND = get_command("SAVEWELCOME_COMMAND")
+SAVEWELCOME_COMMAND = get_command("SAVEWELCOME_COMMAND")) 
 
 @app.on_message(
     filters.command(SAVEWELCOME_COMMAND)
@@ -79,7 +79,7 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
-CLEARWELCOME_COMMAND = get_command("CLEARWELCOME_COMMAND")
+CLEARWELCOME_COMMAND = get_command("CLEARWELCOME_COMMAND")) 
 
 @app.on_message(
     filters.command(CLEARWELCOME_COMMAND)
@@ -96,7 +96,7 @@ async def _(event):
     )
 
 
-LISTWELCOME_COMMAND = get_command("LISTWELCOME_COMMAND")
+LISTWELCOME_COMMAND = get_command("LISTWELCOME_COMMAND"))
 
 @app.on_message(
     filters.command(LISTWELCOME_COMMAND)
