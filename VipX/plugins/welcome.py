@@ -59,8 +59,6 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-SAVEWELCOME_COMMAND = get_command("SAVEWELCOME_COMMAND")) 
-
 @app.on_message(
     filters.command(SAVEWELCOME_COMMAND)
     & filters.group
@@ -79,8 +77,6 @@ async def _(event):
         await event.edit("Welcome note saved. ")
 
 
-CLEARWELCOME_COMMAND = get_command("CLEARWELCOME_COMMAND")) 
-
 @app.on_message(
     filters.command(CLEARWELCOME_COMMAND)
     & filters.group
@@ -95,8 +91,6 @@ async def _(event):
         + "The previous welcome message was `{}`.".format(cws.custom_welcome_message)
     )
 
-
-LISTWELCOME_COMMAND = get_command("LISTWELCOME_COMMAND"))
 
 @app.on_message(
     filters.command(LISTWELCOME_COMMAND)
