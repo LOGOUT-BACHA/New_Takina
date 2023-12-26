@@ -5,7 +5,6 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from VipX import app  
 
-from VipX import CMD_HELP
 from VipX.plugins.sql_helper.welcome_sql import (
     add_welcome_setting,
     get_current_welcome_settings,
