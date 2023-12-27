@@ -2,7 +2,18 @@ import time, re
 from pyrogram import filters
 from pyrogram.types import Message
 from VipX import app
-from VipX.mongo.readable_time import get_readable_time
+from pyrogram import Client, filters
+import requests
+import random
+import os
+import re
+import asyncio
+import time
+from VipX import app
+import string
+from strings import get_command
+from VipX.misc import SUDOERS
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from VipX.mongo.afkdb import add_afk, is_afk, remove_afk
 
 
