@@ -9,7 +9,7 @@ from VipX import app
 
 
 
-LOGGER = getLogger(__name__)
+LOGGER = getLogger(VipX)
 
 class WelDatabase:
     def __init__(self):
