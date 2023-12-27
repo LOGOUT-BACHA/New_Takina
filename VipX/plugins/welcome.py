@@ -75,6 +75,7 @@ async def auto_state(_, message):
         return await message.reply_text(usage)
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
+    if state == "on"
 
 # ... (copy paster teri maa ki chut  )
 
@@ -96,7 +97,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "DAXXMUSIC/assets/upic.png"
+        pic = "VipX/assets/upic.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
