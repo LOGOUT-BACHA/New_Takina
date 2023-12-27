@@ -29,9 +29,7 @@ class VipXBot(Client):
             await self.send_message(
                 config.LOG_GROUP_ID, f"╔═══❰𝐖𝐄𝐋𝐂𝐎𝐌𝐄❱═══❍⊱❁۪۪\n║\n║┣⪼🥀𝐁𝐨𝐭 𝐒𝐭𝐚𝐫𝐭𝐞𝐝 𝐁𝐚𝐛𝐲🎉\n║\n║◈ {config.MUSIC_BOT_NAME}\n║\n║┣⪼🎈𝐈𝐃:- `{self.id}` \n║\n║┣⪼🎄@{self.username} \n║ \n║┣⪼💖𝐓𝐡𝐚𝐧𝐤𝐬 𝐅𝐨𝐫 𝐔𝐬𝐢𝐧𝐠😍\n║\n╚══════════════❍⊱❁"
             )
-             
-        a = await self.get_chat_member(config.LOGGER_ID, self.id)
-        if a.status != ChatMemberStatus.ADMINISTRATOR:
+            
         except:
             LOGGER(__name__).error(
                 "🤬𝐘𝐨𝐮𝐫 𝐁𝐨𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐀𝐝𝐝𝐞𝐝 𝐈𝐧 𝐋𝐨𝐠𝐠𝐞𝐫 𝐆𝐫𝐨𝐮𝐩, 𝐆𝐨 𝐀𝐧𝐝 𝐀𝐝𝐝 𝐁𝐨𝐭 𝐈𝐧 𝐋𝐨𝐠𝐠𝐞𝐫 𝐆𝐫𝐨𝐮𝐩 𝐀𝐧𝐝 𝐌𝐚𝐤𝐞 𝐁𝐨𝐭 𝐀𝐝𝐦𝐢𝐧 𝐎𝐭𝐡𝐞𝐫𝐰𝐢𝐬𝐞 𝐁𝐨𝐭 𝐖𝐢𝐥𝐥 𝐍𝐨𝐭 𝐖𝐨𝐫𝐤🤬"
