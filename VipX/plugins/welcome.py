@@ -1,6 +1,5 @@
 import os
 from PIL import ImageDraw, Image, ImageFont, ImageChops
-from VipX.enums import *
 from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
@@ -77,7 +76,6 @@ async def auto_state(_, message):
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
     if user.status in (
-        enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
         A = await wlcm.find_one(chat_id)
