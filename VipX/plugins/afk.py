@@ -3,9 +3,9 @@ from config import BOT_USERNAME
 from pyrogram.enums import MessageEntityType
 from pyrogram import filters
 from pyrogram.types import Message
-from TeamXBharat import app
-from TeamXBharat.mongo.readable_time import get_readable_time
-from TeamXBharat.mongo.afkdb import add_afk, is_afk, remove_afk
+from VipX import app
+from VipX.mongo.readable_time import get_readable_time
+from VipX.mongo.afkdb import add_afk, is_afk, remove_afk
 
 
 
