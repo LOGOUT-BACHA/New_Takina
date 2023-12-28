@@ -2,12 +2,11 @@ import sys
 
 from pyrogram import Client
 from pyrogram.types import BotCommand
-from pyrogram.enums import ChatMemberStatus, ParseMode
 
 import config
 
 from ..logging import LOGGER
-
+from pyrogram.enums import ChatMemberStatus, ParseMode
 
 class VipXBot(Client):
     def __init__(self):
