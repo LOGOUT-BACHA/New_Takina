@@ -1,6 +1,5 @@
 import sys
 
-from pyrogram.enums import ChatMemberStatus, ParseMode
 from pyrogram import Client
 from pyrogram.types import BotCommand
 
