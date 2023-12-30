@@ -39,6 +39,7 @@ class temp:
 # ... (FUCK you randi ke bacvhhe )
 
 def circle(pfp, size=(500, 500)):
+    pdef circle(pfp, size=(500, 500)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -55,18 +56,18 @@ def welcomepic(pic, user, chatname, id, uname):
     print(f"Absolute Path: {os.path.abspath(__file__)}")
     print(f"Background Path: {background_path}")
 
-    if not os.path.exists(background_path):
-        LOGGER.error(f"Background image not found: {background_path}")
-        return None
-
     try:
         background = Image.open(background_path)
     except Exception as e:
         LOGGER.error(f"Error opening background image: {e}")
         return None
 
+    if background is None:
+        LOGGER.error(f"Failed to open background image: {background_path}")
+        return None
+
     pfp = Image.open(pic).convert("RGBA")
-    pfp = circle(pfp)
+    pfp = circle(pfp)  # Assuming the circle function is correctly defined
     pfp = pfp.resize((825, 824))
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=110)
