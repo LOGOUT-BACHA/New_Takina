@@ -50,7 +50,6 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    bdef welcomepic(pic, user, chatname, id, uname):
     background_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "VipX/assets/wel2.png")
 
     print(f"Absolute Path: {os.path.abspath(__file__)}")
