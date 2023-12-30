@@ -39,7 +39,6 @@ class temp:
 # ... (FUCK you randi ke bacvhhe )
 
 def circle(pfp, size=(500, 500)):
-    pdef circle(pfp, size=(500, 500)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
