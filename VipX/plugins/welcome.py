@@ -4,7 +4,7 @@ from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
 from pyrogram import Client, filters
-from pyrogram.types import ChatMemberStatus
+from pyrogram.types import ChatPermissions
 from VipX import app
 
 
@@ -78,8 +78,7 @@ async def auto_state(_, message):
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
     if user.status in (
-        ChatMemberStatus.ADMINISTRATOR,
-        ChatMemberStatus.OWNER,
+        ChatPermissions.ADMINISTRATOR,
     ):
         A = await wlcm.find_one(chat_id)
         state = message.text.split(None, 1)[1].strip().lower()
