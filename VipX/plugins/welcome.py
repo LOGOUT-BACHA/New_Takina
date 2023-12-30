@@ -7,10 +7,6 @@ from pyrogram import Client, filters
 from pyrogram.types import ChatPermissions
 from VipX import app
 
-
-
-
-
 LOGGER = getLogger(__name__)
 
 class WelDatabase:
@@ -55,19 +51,17 @@ def circle(pfp, size=(500, 500)):
 
 def welcomepic(pic, user, chatname, id, uname):
     background_path = os.path.join(os.path.dirname(__file__), "VipX/assets/wel2.png")
-print(f"Background image path: {background_path}")
 
-if not os.path.exists(background_path):
-    LOGGER.error(f"Background image not found: {background_path}")
-    return None
-
+    if not os.path.exists(background_path):
+        LOGGER.error(f"Background image not found: {background_path}")
+        return None
 
     background = Image.open(background_path)
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('VipX/assets/font.ttf', size=110)
+    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('VipX/assets/font.ttf', size=60)
     draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
     pfp_position = (1990, 435)
@@ -78,7 +72,11 @@ if not os.path.exists(background_path):
     except Exception as e:
         LOGGER.error(f"Error saving welcome image: {e}")
         return None
-        return save_path
+
+    return save_path
+
+# ... (rest of your code remains unchanged)
+
 
 
 # FUCK you bhosadiwale 
