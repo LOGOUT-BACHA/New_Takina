@@ -50,6 +50,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
+    bdef welcomepic(pic, user, chatname, id, uname):
     background_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "VipX/assets/wel2.png")
 
     print(f"Absolute Path: {os.path.abspath(__file__)}")
@@ -59,7 +60,12 @@ def welcomepic(pic, user, chatname, id, uname):
         LOGGER.error(f"Background image not found: {background_path}")
         return None
 
-    background = Image.open(background_path)
+    try:
+        background = Image.open(background_path)
+    except Exception as e:
+        LOGGER.error(f"Error opening background image: {e}")
+        return None
+
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
@@ -77,6 +83,7 @@ def welcomepic(pic, user, chatname, id, uname):
         return None
 
     return save_path
+
 
 # ... (rest of your code remains unchanged)
 
