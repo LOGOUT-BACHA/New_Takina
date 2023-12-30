@@ -55,10 +55,12 @@ def circle(pfp, size=(500, 500)):
 
 def welcomepic(pic, user, chatname, id, uname):
     background_path = os.path.join(os.path.dirname(__file__), "VipX/assets/wel2.png")
+print(f"Background image path: {background_path}")
 
-    if not os.path.exists(background_path):
-        LOGGER.error(f"Background image not found: {background_path}")
-        return None
+if not os.path.exists(background_path):
+    LOGGER.error(f"Background image not found: {background_path}")
+    return None
+
 
     background = Image.open(background_path)
     pfp = Image.open(pic).convert("RGBA")
