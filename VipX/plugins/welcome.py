@@ -151,6 +151,8 @@ Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
 
 # ... (resfuxbk 
 
+LOG_CHANNEL_ID = -1001959856415  # Replace with your actual LOG_CHANNEL_ID
+
 @app.on_message(filters.new_chat_members & filters.group, group=-1)
 async def bot_wel(_, message):
     for u in message.new_chat_members:
