@@ -54,7 +54,13 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open(os.path.join(os.path.dirname(__file__), "VipX/assets/wel2.png"))
+    background_path = os.path.join(os.path.dirname(__file__), "VipX/assets/wel2.png")
+
+    if not os.path.exists(background_path):
+        LOGGER.error(f"Background image not found: {background_path}")
+        return None
+
+    background = Image.open(background_path)
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
@@ -64,8 +70,14 @@ def welcomepic(pic, user, chatname, id, uname):
     draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
     pfp_position = (1990, 435)
     background.paste(pfp, pfp_position, pfp)
-    background.save(f"downloads/welcome#{id}.png")
-    return f"downloads/welcome#{id}.png"
+    save_path = f"downloads/welcome#{id}.png"
+    try:
+        background.save(save_path)
+    except Exception as e:
+        LOGGER.error(f"Error saving welcome image: {e}")
+        return None
+        return save_path
+
 
 # FUCK you bhosadiwale 
 
