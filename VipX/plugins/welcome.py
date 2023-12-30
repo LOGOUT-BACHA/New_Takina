@@ -4,6 +4,7 @@ from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
 from pyrogram import Client, filters
+from pyrogram.types import ChatMemberStatus
 from VipX import app
 
 
