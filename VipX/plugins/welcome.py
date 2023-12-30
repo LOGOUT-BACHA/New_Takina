@@ -54,7 +54,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("VipX/assets/wel2.png")
+    background = Image.open(os.path.join(os.path.dirname(__file__), "VipX/assets/wel2.png"))
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((825, 824))
