@@ -71,15 +71,16 @@ def welcomepic(pic, user, chatname, id, uname):
 
 
 @app.on_message(filters.command("wel") & ~filters.private)
+async@app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
     usage = "**Usage:**\n⦿/wel [on|off]\n➤ᴀᴜʀ ʜᴀᴀɴ ᴋᴀɴɢᴇʀs ᴋᴀʀᴏ ᴀʙ ᴄᴏᴘʏ ʙʜᴏsᴀᴅɪᴡᴀʟᴇ\n➤sᴀʟᴏɴ ᴀᴜʀ ʜᴀᴀɴ sᴛʏʟɪsʜ ғᴏɴᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ɪɴ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ.!\ᴀᴜʀ ʜᴀᴀɴ ᴀɢʀ ᴋʜᴜᴅ ᴋɪ ᴋᴀʀɴɪ ʜᴀɪ ᴛᴏ ɢᴀᴀɴᴅ ᴍᴀʀᴀᴏ ʙᴇᴛɪᴄʜᴏᴅ"
     if len(message.command) == 1:
         return await message.reply_text(usage)
+
     chat_id = message.chat.id
-    user = await app.get_chat_member(message.chat.id, message.from_user.id)
-    if user.status in (
-        ChatPermissions.ADMINISTRATOR,
-    ):
+    user = await app.get_chat_member(chat_id, message.from_user.id)
+
+    if user.status in ("administrator", "creator"):
         A = await wlcm.find_one(chat_id)
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "on":
