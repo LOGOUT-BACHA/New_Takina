@@ -168,7 +168,10 @@ LOG_CHANNEL_ID = -1001959856415  # Replace with your actual LOG_CHANNEL_ID
 @app.on_message(filters.new_chat_members & filters.group, group=-1)
 async def bot_wel(_, message):
     for u in message.new_chat_members:
-        if u.id == app.me.id:
+        # Use get_me() to get information about the bot
+        bot_info = await app.get_me()
+
+        if u.id == bot_info.id:
             await app.send_message(LOG_CHANNEL_ID, f"""
 **NEW GROUP
 ➖➖➖➖➖➖➖➖➖➖➖➖
@@ -177,3 +180,4 @@ ID: {message.chat.id}
 USERNAME: @{message.chat.username}
 ➖➖➖➖➖➖➖➖➖➖➖➖**
 """)
+            
