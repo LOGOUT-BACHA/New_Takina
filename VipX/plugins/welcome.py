@@ -71,9 +71,8 @@ def welcomepic(pic, user, chatname, id, uname):
         LOGGER.error(f"Error opening background image: {e}")
         return None
 
-    if background is None:
-        LOGGER.error(f"Failed to open background image: {background_path}")
-        return None
+    # Continue with the rest of your code...
+
 
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)  # Assuming the circle function is correctly defined
