@@ -40,14 +40,24 @@ class temp:
 
 def circle(pfp, size=(500, 500)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
+    
+    # Check if pfp has an alpha channel
+    if pfp.mode != 'RGBA':
+        pfp = pfp.convert('RGBA')
+
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
     draw = ImageDraw.Draw(mask)
     draw.ellipse((0, 0) + bigsize, fill=255)
     mask = mask.resize(pfp.size, Image.ANTIALIAS)
-    mask = ImageChops.darker(mask, pfp.split()[-1])
-    pfp.putalpha(mask)
+    
+    # Check if pfp has an alpha channel before applying putalpha
+    if 'A' in pfp.getbands():
+        mask = ImageChops.darker(mask, pfp.split()[-1])
+        pfp.putalpha(mask)
+    
     return pfp
+
 
 def welcomepic(pic, user, chatname, id, uname):
     background_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "VipX/assets/wel2.png")
@@ -69,7 +79,7 @@ def welcomepic(pic, user, chatname, id, uname):
     pfp = circle(pfp)  # Assuming the circle function is correctly defined
     pfp = pfp.resize((825, 824))
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=110)
+    font = ImageFont.truetype('VipX/assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('VipX/assets/font.ttf', size=60)
     draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
     pfp_position = (1990, 435)
